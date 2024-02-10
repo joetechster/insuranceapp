@@ -21,16 +21,16 @@ const ImageCard = ({
   backgroundColor = '#f4fde7',
 }: ImageCardProps) => {
   return (
-    <Pressable onPress={onPress}>
-      <View style={[styles.card, { borderColor, backgroundColor }]}>
-        <Image source={image} />
+    <View style={{borderRadius: styles.card.borderRadius, overflow: "hidden"}}>
+      <Pressable onPress={onPress} style={[styles.card, { borderColor, backgroundColor }]} android_ripple={{color: "#bbbbbb11", borderless: true}}>
+        <Image source={image} style={{height: 40, width: 40}}/>
         <View style={styles.cardTextWrapper}>
           <Text style={app_styles.boldText}>{title}</Text>
-          <Text style={app_styles.faintText}>{text}</Text>
+          <Text style={[app_styles.faintText, {fontSize: 12}]}>{text}</Text>
         </View>
         <Image source={require("../assets/arrow-right.png")} />
-      </View>
-    </Pressable>
+      </Pressable>
+    </View>
   );
 };
 

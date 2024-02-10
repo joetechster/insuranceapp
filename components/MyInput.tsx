@@ -28,6 +28,7 @@ const MyInput = ({
       ) : (
         <TextInput
           placeholder={placeholder}
+          placeholderTextColor={styles.container.borderColor}
           value={value}
           onChangeText={onChangeText}
           style={styles.input}
@@ -52,7 +53,7 @@ const styles = StyleSheet.create({
     flex: 1,
     height: 50,
   },
-  input: { flex: 1, fontWeight: '800', height: 50 },
+  input: { flex: 1, fontWeight: '800', height: 50, color: "black" },
 });
 
 export default MyInput;

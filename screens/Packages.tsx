@@ -20,7 +20,7 @@ const Packages = ({navigation}: any) => {
         borderColor="#e9fcd5"
         onPress={() => navigation.navigate("Subscriptions")}
       />
-      <Gap />
+      <Gap height={15} />
       <ImageCard
         image={require('../assets/call-calling.png')}
         title="Consultation"
@@ -28,7 +28,7 @@ const Packages = ({navigation}: any) => {
         backgroundColor="#e6f0fe"
         borderColor="#b2d0fe"
       />
-      <Gap />
+      <Gap height={15} />
       <ImageCard
         image={require('../assets/health.png')}
         title="Prescription"
@@ -44,6 +44,8 @@ const Packages = ({navigation}: any) => {
       ) : (
         <Text style={app_styles.faintText}>No active plan</Text>
       )}
+      <Gap height={35} />
+
     </ScrollView>
   );
 };

@@ -60,23 +60,19 @@ const Subscriptions = ({navigation}: any) => {
           <Text style={styles.package_toggle_text}>Annually</Text>
         </Pressable>
       </View>
-      {insurancePackage === packages.monthly
-        ? insurancePlans
-            .filter((plan) => plan['package'] === packages.monthly)
-            .map((plan) => (
-              <>
-                <Gap height={20} />
-                <SubscriptionCard plan={plan} onPress={() => navigation.navigate("Subscribe", plan)}/>
-              </>
-            ))
-        : insurancePlans
-            .filter((plan) => plan['package'] === packages.yearly)
-            .map((plan) => (
-              <>
-                <Gap height={20} />
-                <SubscriptionCard plan={plan}  onPress={() => navigation.navigate("Subscribe", plan)} />
-              </>
-            ))}
+      <View style={{gap: 10, paddingVertical: 20}}>
+        {insurancePackage === packages.monthly
+          ? insurancePlans
+          .filter((plan) => plan['package'] === packages.monthly)
+          .map((plan, i) => (
+            <SubscriptionCard key={i} plan={plan} onPress={() => navigation.navigate("Subscribe", plan)}/>
+          ))
+          : insurancePlans
+          .filter((plan) => plan['package'] === packages.yearly)
+          .map((plan, i) => (
+            <SubscriptionCard plan={plan} key={i} onPress={() => navigation.navigate("Subscribe", plan)} />
+          ))}
+      </View>
     </ScrollView>
   );
 };

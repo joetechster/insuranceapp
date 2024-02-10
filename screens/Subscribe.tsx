@@ -43,7 +43,7 @@ const Subscribe = ({ route }: any) => {
           onPress={() => setSelectBank((prev) => !prev)}
           left={<Image source={require('../assets/bank.png')} width={20} />}
           mid={
-            <Text style={{ flex: 1, fontWeight: '800' }}>
+            <Text style={{ flex: 1, fontWeight: '800', textAlign: "center" }}>
               Access master card (**2154)
             </Text>
           }

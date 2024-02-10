@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-  header: { height: 100 },
+  header: { height: 80, backgroundColor: "white" },
   headerTitle: {
     fontWeight: '700',
     fontSize: 22,

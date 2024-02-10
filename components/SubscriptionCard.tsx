@@ -31,7 +31,7 @@ const SubscriptionCard = ({
           <View style={styles.sub_name_bg}>
             <Text style={styles.sub_name}>
               {plan.name}
-              {plan.name === 'Standard' && ' - Recommended'}
+              {plan.name === 'Standard' && new_sub && ' - Recommended'}
             </Text>
           </View>
           {!new_sub && (
